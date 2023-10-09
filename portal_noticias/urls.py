@@ -23,5 +23,6 @@ urlpatterns = [
     path('', inicio, name='inicio'),
     path('contato', contato, name='contato'),
     path('noticias/', include('noticias.urls', namespace='noticia')),
+    path('api-auth/', include('rest_framework.urls')),
     path('api/', include('api.urls', namespace='api')),
 ]
