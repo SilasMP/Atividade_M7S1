@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap5',
     'rest_framework',
+    'rest_framework.authtoken',
     'base',
     'noticias',
     'api',
@@ -132,5 +133,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DATE_INPUT_FORMATS': ["%d/%m/%y"],
-    'DATE_FORMAT': '%d/%m/%y'
+    'DATE_FORMAT': '%d/%m/%y',
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
 }
